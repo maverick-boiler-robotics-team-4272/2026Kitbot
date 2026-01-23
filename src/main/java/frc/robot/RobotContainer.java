@@ -59,6 +59,8 @@ public class RobotContainer {
 
         joystick.leftTrigger(0.1).whileTrue(Commands.run(intake.runIntake(joystick::getLeftTriggerAxis
         ), intake));
+        joystick.rightTrigger(0.1).whileTrue(Commands.run(intake.runIntake(-joystick::getLeftTriggerAxis
+        ), intake));
         // Idle while the robot is disabled. This ensures the configured
         // neutral mode is applied to the drive motors while disabled.
         final var idle = new SwerveRequest.Idle();

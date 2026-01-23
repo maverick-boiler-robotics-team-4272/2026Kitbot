@@ -36,7 +36,6 @@ public class Intake extends SubsystemBase {
   public Runnable runIntake(DoubleSupplier speed) {
     return (() -> motor.set(speed.getAsDouble())); // This is NOT it's own custome class now... YAY!!!
   }
-
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
